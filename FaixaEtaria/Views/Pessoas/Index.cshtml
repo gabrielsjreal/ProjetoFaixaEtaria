@@ -1,0 +1,16 @@
+﻿@model IEnumerable<FaixaEtaria.Models.Pessoa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-info">Cadastrar Pessoa</a>
+</p>
+
+
+@await Html.PartialAsync("_Adolescente", Model)
+@await Html.PartialAsync("_Adultos", Model)
+@await Html.PartialAsync("_Idosos", Model)
