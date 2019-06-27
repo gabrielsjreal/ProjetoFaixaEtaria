@@ -11,6 +11,13 @@
 </p>
 
 
-@await Html.PartialAsync("_Adolescente", Model)
-@await Html.PartialAsync("_Adultos", Model)
-@await Html.PartialAsync("_Idosos", Model)
+<!--Os comando abaixo são da partial view -> os coamndo estão comentados -->
+@*@await Html.PartialAsync("_Adolescente", Model)
+    @await Html.PartialAsync("_Adultos", Model)
+    @await Html.PartialAsync("_Idosos", Model)*@
+
+<!--Comandos abaixo são relacionados com as Views Components-->
+<!--Para criar um componete tem add uma pasta e uma vies 'Default' em "Shared"-->
+@await Component.InvokeAsync("Adolescente");
+@await Component.InvokeAsync("Adulto");
+@await Component.InvokeAsync("Idoso");
